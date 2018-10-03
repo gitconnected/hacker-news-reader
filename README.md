@@ -39,7 +39,7 @@ Join the #hacktoberfest channel in our [community Slack](https://community.gitco
 ## Getting Started
 
 First initialize the project. Our solution uses [Create React App](https://github.com/facebook/create-react-app),
-but feel free to whatever you want, even static HTML.
+but feel free to use whatever you want, even static HTML.
 
 Review the [Hacker New API](https://github.com/HackerNews/API)
 documentation. You will need the /topstories endpoint to get the list of the
