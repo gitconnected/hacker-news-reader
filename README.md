@@ -1,4 +1,4 @@
-Created by [gitconnected](https://gitconnected.com)
+#### Created by [gitconnected](https://gitconnected.com)
 
 # Hacktoberfest 2018 Project
 
@@ -45,3 +45,9 @@ Almost complete, check back soon!
 Send a message in our Slack or submit a GitHub link to [opensource@gitconnected.com](mailto:opensource@gitconnected.com)
 
 We would love to see solutions using Vue, Angular, vanilla JavaScript, or anything else! Show off some advanced techniques such as server side render (SSR) or progressive web apps (PWA).
+
+## Demo
+
+![Hacktoberfest Demo](https://media.giphy.com/media/3HwA2U7rZgn0pRnV9f/giphy.gif 'Hacktoberfest Demo')
+
+![Hacktoberfest Screenshot](https://github.com/gitconnected/hacker-news-reader/raw/master/public/hacktoberfest-screenshot.png 'Hacktoberfest Screenshot')
