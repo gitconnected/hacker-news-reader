@@ -36,6 +36,18 @@ Join the #hacktoberfest channel in our [community Slack](https://community.gitco
 - Create React App to bootstrap a project
 - localStorage for persisting state
 
+## Getting Started
+
+First initialize the project. Our solution uses [Create React App](https://github.com/facebook/create-react-app),
+but feel free to whatever you want, even static HTML.
+
+Review the [Hacker New API](https://github.com/HackerNews/API)
+documentation. You will need the /topstories endpoint to get the list of the
+story IDs and the /item endpoint to get the data for each story individually.
+
+Finally, get your project into production. We chose to use a Chrome Extension, but
+you can host it in any manner than you wish. GitHub pages is a great option. The final solution should show a list of the top stories on Hacker News.
+
 ## Step-by-step Turorial
 
 Almost complete, check back soon!
