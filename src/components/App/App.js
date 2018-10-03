@@ -15,14 +15,8 @@ class Home extends Component {
     stories: [],
   };
 
-  state = {
-    storyIds: this.props.storyIds || [],
-    stories: this.props.stories || [],
-    page: this.props.page || 0,
-  };
-
   componentDidMount() {
-    this.props.fetchStoriesFirstPage();
+    this.props.fetchStories(0);
     this.setBodyBackgroundColor();
   }
 
@@ -41,9 +35,9 @@ class Home extends Component {
   }
 
   fetchStories = () => {
-    const { storyIds, page, fetchStories, isFetching } = this.props;
+    const { page, fetchStories, isFetching } = this.props;
     if (!isFetching) {
-      fetchStories({ storyIds, page });
+      fetchStories({ page });
     }
   };
 
@@ -57,11 +51,20 @@ class Home extends Component {
             <TitleWrapper>
               <Title>
                 // Hacker News Reader{' '}
-                <GithubLink href="https://github.com/gitconnected" target="_blank">
+                <GithubLink
+                  href="https://github.com/gitconnected/hacker-news-reader"
+                  target="_blank"
+                >
                   (build your own)
                 </GithubLink>
               </Title>
               <div>
+                <SocialLink
+                  href="https://github.com/gitconnected/hacker-news-reader"
+                  target="blank"
+                >
+                  <i className="fab fa-github" />
+                </SocialLink>
                 <SocialLink href="https://twitter.com/gitconnected" target="blank">
                   <i className="fab fa-twitter" />
                 </SocialLink>

@@ -50,4 +50,14 @@ export const Source = styled.div`
   color: ${({ theme }) => theme.textSecondary};
   border-top: 1px solid ${({ theme }) => theme.border};
   padding: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+`;
+
+export const Favicon = styled.img`
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  margin-right: 6px;
 `;

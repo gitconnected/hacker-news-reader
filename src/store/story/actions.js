@@ -1,34 +1,26 @@
-import hackerNewsApi from 'services/hackerNewsApi';
-import { buildRequestCreator } from 'store/utils';
+import api from 'services/gitconnectedApi';
+import { buildRequestCreator, buildActionCreator } from 'store/utils';
 
 const NS = '@hackerNewsReader/story';
 
 export const actionTypes = {
-  FETCH_STORY_IDS: `${NS}/FETCH_STORY_IDS`,
   FETCH_STORIES: `${NS}/FETCH_STORIES`,
+  REACHED_LAST_PAGE: `${NS}/REACHED_LAST_PAGE`,
 };
 
 const actions = {
-  fetchStoryIds: buildRequestCreator(
-    actionTypes.FETCH_STORY_IDS,
-    ({ request, payload, dispatch }) => {
-      dispatch(request.request(payload));
-      return hackerNewsApi
-        .getTopStoryIds()
-        .then(storyIds => {
-          dispatch(request.success({ storyIds }));
-          dispatch(actions.fetchStories({ storyIds, page: 0 }));
-          return storyIds;
-        })
-        .catch(err => dispatch(request.failure(err)));
-    },
-  ),
+  buildActionCreator: buildActionCreator(actionTypes.REACHED_LAST_PAGE),
   fetchStories: buildRequestCreator(actionTypes.FETCH_STORIES, ({ request, payload, dispatch }) => {
-    const { storyIds, page } = payload;
     dispatch(request.request(payload));
-    return hackerNewsApi
-      .getStoriesByPage(storyIds, page)
-      .then(stories => dispatch(request.success({ stories })))
+    return api
+      .fetchStories(payload.page)
+      .then(({ newsArticles }) => {
+        if (newsArticles.length) {
+          dispatch(request.success({ stories: newsArticles }));
+        } else {
+          dispatch(actions.reachedLastPage);
+        }
+      })
       .catch(err => dispatch(request.failure(err)));
   }),
 };

@@ -51,4 +51,5 @@ export const Spacer = styled.div`
 
 export const ExternalLink = styled.a`
   display: flex;
+  font-size: 14px;
 `;

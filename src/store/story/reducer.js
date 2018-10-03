@@ -1,10 +1,10 @@
 import { actionTypes } from './actions';
 
 const getInitialState = () => ({
-  storyIds: [],
   stories: [],
   page: 0,
   isFetching: false,
+  hasMoreStores: true,
   error: '',
 });
 
@@ -26,6 +26,18 @@ const story = (state = getInitialState(), { type, payload }) => {
         ...state,
         stories: [...state.stories, ...payload.stories],
         page: state.page + 1,
+        isFetching: false,
+      };
+    case `${actionTypes.FETCH_STORIES}_FAILURE`:
+      return {
+        ...state,
+        isFetching: false,
+        hasMoreStores: false,
+      };
+    case actionTypes.REACHED_LAST_PAGE:
+      return {
+        ...state,
+        hasMoreStores: false,
         isFetching: false,
       };
     default:

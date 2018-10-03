@@ -3,7 +3,7 @@ import { layouts, themes } from './utils';
 
 const getInitialState = () => ({
   theme: themes.dark,
-  layout: layouts.list,
+  layout: layouts.grid,
 });
 
 const app = (state = getInitialState(), { type, payload }) => {

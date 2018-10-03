@@ -1,15 +1,19 @@
 {
-  "short_name": "Hacker New Reacer",
-  "name": "Hacker News Reader by gitconnected",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "manifest_version": 2,
+  "name": "Hacker News Reader",
+  "description": "A night mode Hacker News reader for your new tab.",
+  "version": "0.1.0",
+  "author": "gitconnected",
+  "browser_action": {
+    "default_icon": "yc.png",
+    "default_title": "New Tab"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["activeTab", "tabs", "topSites"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
