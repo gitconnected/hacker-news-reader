@@ -53,7 +53,7 @@ npm run start
 # Navigate to http://localhost:3000
 ```
 
-First initialize the project. Our solution uses [Create React App](https://github.com/facebook/create-react-app),
+To build your own from scratch, first initialize the project. Our solution uses [Create React App](https://github.com/facebook/create-react-app),
 but feel free to use whatever you want, even static HTML.
 
 Review the [Hacker New API](https://github.com/HackerNews/API)
