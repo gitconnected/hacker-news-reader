@@ -48,6 +48,10 @@ story IDs and the /item endpoint to get the data for each story individually.
 Finally, get your project into production. We chose to use a Chrome Extension, but
 you can host it in any manner than you wish. GitHub pages is a great option. The final solution should show a list of the top stories on Hacker News.
 
+Join the [Slack channel](https://community.gitconnected.com) to
+collaborate and get help. This project can be difficult, so make sure you work on it
+with some friends!
+
 ## Step-by-step Turorial
 
 Almost complete, check back soon!
