@@ -9,8 +9,18 @@ const HN_ROOT = 'https://news.ycombinator.com';
 const HN_ITEM = `${HN_ROOT}/item?id=`;
 const HN_USER = `${HN_ROOT}/user?id=`;
 
-const ListItem = ({ by, commentCount, score, url, title, id, type, time, site, postDate }) => {
-  const commentUrl = `${HN_ITEM}${id}`;
+const ListItem = ({
+  postedBy,
+  commentCount,
+  score,
+  url,
+  title,
+  sourceId,
+  type,
+  site,
+  postDate,
+}) => {
+  const commentUrl = `${HN_ITEM}${sourceId}`;
   const link = type === 'story' ? commentUrl : url;
 
   return (
@@ -22,8 +32,12 @@ const ListItem = ({ by, commentCount, score, url, title, id, type, time, site, p
       </ExernalLink>
       <Description>
         {score} points by{' '}
-        <CommentLink href={`${HN_USER}${by}`} rel="nofollow noreferrer noopener" target="_blank">
-          {by}
+        <CommentLink
+          href={`${HN_USER}${postedBy}`}
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          {postedBy}
         </CommentLink>{' '}
         {timeago.format(new Date(postDate).toISOString())} {' | '}
         <CommentLink href={commentUrl} rel="nofollow noreferrer noopener" target="_blank">
