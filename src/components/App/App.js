@@ -57,7 +57,10 @@ class Home extends Component {
             <TitleWrapper>
               <Title>
                 // Hacker News Reader{' '}
-                <GithubLink href="https://github.com/gitconnected" target="_blank">
+                <GithubLink
+                  href="https://github.com/gitconnected/hacker-news-reader"
+                  target="_blank"
+                >
                   (build your own)
                 </GithubLink>
               </Title>
