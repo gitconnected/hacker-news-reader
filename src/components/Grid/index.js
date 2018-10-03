@@ -8,7 +8,7 @@ class Grid extends Component {
     return (
       <GridWrapper>
         {this.props.stories.map(story => (
-          <GridItem key={story.id} {...story} />
+          <GridItem key={story.url} {...story} />
         ))}
       </GridWrapper>
     );

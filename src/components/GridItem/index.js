@@ -47,7 +47,7 @@ class GridItem extends Component {
     const { url, title, site } = this.props;
     const fav = this.getFav();
     const image = this.getImage();
-    console.log('state = ', title, this.state);
+
     return (
       <a href={url} target="_blank" rel="nofollow noreferrer nofollow">
         <Item>
