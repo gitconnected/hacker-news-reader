@@ -1,7 +1,7 @@
 import React from 'react';
 import { layouts, themes } from 'store/app/utils';
 
-import { Header, Spacer, NavSection, Content, Icon, Logo, ExternalLink } from './styles';
+import { Header, Spacer, NavSection, Content, Icon, Logo, ExternalLink, Text } from './styles';
 
 const Nav = ({ layout, theme, setLayout, setTheme }) => (
   <div>
@@ -13,6 +13,7 @@ const Nav = ({ layout, theme, setLayout, setTheme }) => (
           </ExternalLink>
         </NavSection>
         <NavSection>
+          <Text>TOGGLE</Text>
           {layout === layouts.list ? (
             <Icon onClick={() => setLayout(layouts.grid)}>
               <i className="fas fa-th-large" />

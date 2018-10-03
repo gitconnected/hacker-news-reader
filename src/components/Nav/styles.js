@@ -53,3 +53,8 @@ export const ExternalLink = styled.a`
   display: flex;
   font-size: 14px;
 `;
+
+export const Text = styled.span`
+  font-weight: bold;
+  font-size: 10px;
+`;
