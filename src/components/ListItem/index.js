@@ -13,13 +13,13 @@ const HN_USER = `${HN_ROOT}/user?id=`;
 const ListItem = ({ by, kids = [], score, url, title, id, type, time }) => {
   const commentUrl = `${HN_ITEM}${id}`;
   const link = type === 'story' ? commentUrl : url;
-  const host = getSiteHostname(url) || 'news.ycombinator.com';
+  const site = getSiteHostname(url) || 'news.ycombinator.com';
 
   return (
     <Item>
       <ExernalLink href={link} rel="nofollow noreferrer noopener" target="_blank">
         <Title>
-          {title} <Host>({host})</Host>
+          {title} <Host>({site})</Host>
         </Title>
       </ExernalLink>
       <Description>
