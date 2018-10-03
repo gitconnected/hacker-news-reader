@@ -2,16 +2,16 @@
   "manifest_version": 2,
   "name": "Hacker News Reader",
   "description": "A night mode Hacker News reader for your new tab. Class list view or cards with descriptions.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "gitconnected",
   "browser_action": {
-    "default_icon": "yc.png",
+    "default_icon": "yc-night.png",
     "default_title": "New Tab"
   },
   "icons": {
-    "128": "yc.png",
-    "16": "yc.png",
-    "48": "yc.png"
+    "128": "yc-night.png",
+    "48": "yc-night.png",
+    "16": "yc-night-small.png"
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
