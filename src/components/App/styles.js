@@ -54,4 +54,9 @@ export const SocialLink = styled.a`
 export const GithubLink = styled.a`
   font-size: 14px;
   text-decoration: underline;
+  color: ${({ theme }) => theme.textSecondary};
+
+  &:visited {
+    color: ${({ theme }) => theme.textSecondary};
+  }
 `;
