@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Hacker News Reader",
-  "description": "A night mode Hacker News reader for your new tab. Class list view or cards with descriptions.",
+  "name": "Hacker News",
+  "description": "Hacker News for your new tab. Night mode or day mode (just like your IDE). Card view with images or the classic HN list view.",
   "version": "1.0.0",
   "author": "gitconnected",
   "browser_action": {
