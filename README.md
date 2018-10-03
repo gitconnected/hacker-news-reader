@@ -38,6 +38,21 @@ Join the #hacktoberfest channel in our [community Slack](https://community.gitco
 
 ## Getting Started
 
+Run the completed project to understand what you're building
+
+```sh
+# Clone the project
+git clone https://github.com/gitconnected/hacker-news-reader.git
+
+# Install dependencies
+npm install
+
+# Start the project
+npm run start
+
+# Navigate to http://localhost:3000
+```
+
 First initialize the project. Our solution uses [Create React App](https://github.com/facebook/create-react-app),
 but feel free to use whatever you want, even static HTML.
 
@@ -49,8 +64,7 @@ Finally, get your project into production. We chose to use a Chrome Extension, b
 you can host it in any manner than you wish. GitHub pages is a great option. The final solution should show a list of the top stories on Hacker News.
 
 Join the [Slack channel](https://community.gitconnected.com) to
-collaborate and get help. This project can be difficult, so make sure you work on it
-with some friends!
+collaborate and get help. This project can be difficult, so make sure you work on it with some friends!
 
 ## Step-by-step Turorial
 
