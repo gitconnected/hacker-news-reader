@@ -42,6 +42,7 @@ class Home extends Component {
 
   fetchStories = () => {
     const { storyIds, page, fetchStories, isFetching } = this.props;
+    console.log('storyIds :', storyIds, 'page:', page);
     if (!isFetching) {
       fetchStories({ storyIds, page });
     }

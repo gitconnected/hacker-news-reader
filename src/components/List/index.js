@@ -6,11 +6,14 @@ import { ListWrapper } from './styles';
 class List extends Component {
   render() {
     const { stories } = this.props;
+    console.log(stories);
     return (
       <ListWrapper>
-        {stories.map(story => (
-          <ListItem key={story.id} {...story} />
-        ))}
+        {stories
+          .filter(story => `${story.title}`.toUpperCase().indexOf('APPLE') >= 0)
+          .map(story => (
+            <ListItem key={story.id} {...story} />
+          ))}
       </ListWrapper>
     );
   }
