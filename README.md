@@ -27,17 +27,17 @@ Join the #hacktoberfest channel in our [community Slack](https://community.gitco
 
 ## What You'll Learn
 
-- React
-- Redux
-- Styled Components
-- CSS Grid
-- CSS Flex
-- CSS Animations
-- Using an API
-- Axios for network requests
-- Redux middleware
-- Create React App to bootstrap a project
-- localStorage for persisting state
+-   React
+-   Redux
+-   Styled Components
+-   CSS Grid
+-   CSS Flex
+-   CSS Animations
+-   Using an API
+-   Axios for network requests
+-   Redux middleware
+-   Create React App to bootstrap a project
+-   localStorage for persisting state
 
 ## Getting Started
 
@@ -60,7 +60,7 @@ To build your own from scratch, first initialize the project. Our solution uses 
 but feel free to use whatever you want, even static HTML.
 
 Review the [Hacker New API](https://github.com/HackerNews/API)
-documentation. You will need the /topstories endpoint to get the list of the
+documentation. You will need the `/topstories` endpoint to get the list of the
 story IDs and the /item endpoint to get the data for each story individually.
 
 Finally, get your project into production. We chose to use a Chrome Extension, but
@@ -69,7 +69,7 @@ you can host it in any manner than you wish. GitHub pages is a great option. The
 Join the [Slack channel](https://community.gitconnected.com) to
 collaborate and get help. This project can be difficult, so make sure you work on it with some friends!
 
-## Step-by-step Turorial
+## Step-by-step Tutorial
 
 Almost complete, check back soon!
 
