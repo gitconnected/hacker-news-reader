@@ -14,7 +14,8 @@ Try it out: [Download the Chrome Extension](https://chrome.google.com/webstore/d
 
 Website: [View on gitconnected](https://gitconnected.com/hacktoberfest)
 
-[![Hacktoberfest Video](http://img.youtube.com/vi/aTimQHf4zlM/1.jpg)](http://www.youtube.com/watch?v=aTimQHf4zlM)
+YouTube Intro: http://www.youtube.com/watch?v=aTimQHf4zlM
+[![Hacktoberfest Video](http://img.youtube.com/vi/aTimQHf4zlM/0.jpg)](http://www.youtube.com/watch?v=aTimQHf4zlM)
 
 Hacktoberfest 2018 is underway! Join the developer community from gitconnected in working together to build a Hacker News clone for your Hacktoberfest project. Use your favorite frontend library (or follow along with our solution using React) and utilize the open source Hacker News API for your data.
 
