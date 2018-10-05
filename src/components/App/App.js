@@ -31,14 +31,11 @@ class Home extends Component {
     if (prevProps.theme !== this.props.theme) {
       this.setBodyBackgroundColor();
     }
-    console.log(
-      'from componentDidUpdate, filtered stories:',
-      this.props.stories.filter(story => `${story.title}`.toUpperCase().indexOf('APPLE') >= 0),
-    );
+
     const filteredStories = this.props.stories.filter(
-      story => `${story.title}`.toUpperCase().indexOf('APPLE') >= 0,
+      story => `${story.title}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0,
     );
-    if (filteredStories.length < 7) {
+    if (filteredStories.length < 7 && this.props.hasMoreStores) {
       this.fetchStories();
     }
   }
@@ -60,7 +57,10 @@ class Home extends Component {
   };
 
   render() {
-    const { stories, layout, theme, hasMoreStores } = this.props;
+    const { stories, layout, theme, hasMoreStores, searchTerm } = this.props;
+    const filteredStories = stories.filter(
+      story => `${story.title}`.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0,
+    );
     return (
       <ThemeProvider theme={theme === themes.light ? colorsLight : colorsDark}>
         <div>
@@ -96,7 +96,7 @@ class Home extends Component {
               </div>
             </TitleWrapper>
             <InfiniteScroll
-              dataLength={stories.length}
+              dataLength={filteredStories.length}
               next={this.fetchStories}
               hasMore={hasMoreStores}
               loader={<Loader />}
@@ -104,6 +104,11 @@ class Home extends Component {
                 height: '100%',
                 overflow: 'visible',
               }}
+              endMessage={
+                <p style={{ textAlign: 'center', color: '#848886' }}>
+                  <b>{filteredStories.length > 0 ? 'No more stories...' : 'No results found'}</b>
+                </p>
+              }
             >
               {layout === layouts.list ? <List stories={stories} /> : <Grid stories={stories} />}
             </InfiniteScroll>
