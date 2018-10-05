@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import getArticleLink from 'utils/getArticleLink';
 
 import { Item, Card, Image, Content, Title, Source, Favicon } from './styles';
 
@@ -44,12 +45,13 @@ class GridItem extends Component {
   }
 
   render() {
-    const { url, title, site } = this.props;
+    const { url, title, site, sourceId } = this.props;
     const fav = this.getFav();
     const image = this.getImage();
+    const link = getArticleLink({ url, id: sourceId });
 
     return (
-      <a href={url} target="_blank" rel="nofollow noreferrer nofollow">
+      <a href={link} target="_blank" rel="nofollow noreferrer nofollow">
         <Item>
           <Card>
             <Image src={image} onError={this.handleImageError} />
