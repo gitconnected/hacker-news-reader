@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Hacker News",
   "description": "Hacker News for your new tab. Night mode or day mode (just like your IDE). Card view with images or the classic HN list view.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "gitconnected",
   "browser_action": {
     "default_icon": "yc-night.png",
