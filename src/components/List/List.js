@@ -6,7 +6,6 @@ import { ListWrapper } from './styles';
 class List extends Component {
   render() {
     const { stories, searchTerm } = this.props;
-    console.log(stories);
     return (
       <ListWrapper>
         {stories
