@@ -1,22 +1,9 @@
-import React, { Component } from 'react';
-import ListItem from 'components/ListItem';
+import { connect } from 'react-redux';
+import actions from 'store/story/actions';
+import List from './List';
 
-import { ListWrapper } from './styles';
+const mapStateToProps = state => ({
+  searchTerm: state.story.searchTerm,
+});
 
-class List extends Component {
-  render() {
-    const { stories } = this.props;
-    console.log(stories);
-    return (
-      <ListWrapper>
-        {stories
-          .filter(story => `${story.title}`.toUpperCase().indexOf('APPLE') >= 0)
-          .map(story => (
-            <ListItem key={story.id} {...story} />
-          ))}
-      </ListWrapper>
-    );
-  }
-}
-
-export default List;
+export default connect(mapStateToProps)(List);
