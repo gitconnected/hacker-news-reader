@@ -5,7 +5,7 @@ import Nav from 'components/Nav';
 import List from 'components/List';
 import Grid from 'components/Grid';
 import Loader from 'components/Loader';
-import Search from 'components/Search/Search.js';
+import Search from 'components/Search';
 import { layouts, themes } from 'store/app/utils';
 import { colorsDark, colorsLight } from 'styles/palette';
 

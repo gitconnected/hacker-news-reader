@@ -6,6 +6,7 @@ const getInitialState = () => ({
   page: 0,
   isFetching: false,
   error: '',
+  searchTerm: '',
 });
 
 const story = (state = getInitialState(), { type, payload }) => {
@@ -27,6 +28,11 @@ const story = (state = getInitialState(), { type, payload }) => {
         stories: [...state.stories, ...payload.stories],
         page: state.page + 1,
         isFetching: false,
+      };
+    case `${actionTypes.UPDATE_SEARCH}`:
+      return {
+        ...state,
+        ...payload,
       };
     default:
       return state;

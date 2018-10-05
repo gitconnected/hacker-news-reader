@@ -1,11 +1,12 @@
 import hackerNewsApi from 'services/hackerNewsApi';
-import { buildRequestCreator } from 'store/utils';
+import { buildRequestCreator, buildActionCreator } from 'store/utils';
 
 const NS = '@hackerNewsReader/story';
 
 export const actionTypes = {
   FETCH_STORY_IDS: `${NS}/FETCH_STORY_IDS`,
   FETCH_STORIES: `${NS}/FETCH_STORIES`,
+  UPDATE_SEARCH: 'UPDATE_SEARCH',
 };
 
 const actions = {
@@ -31,6 +32,7 @@ const actions = {
       .then(stories => dispatch(request.success({ stories })))
       .catch(err => dispatch(request.failure(err)));
   }),
+  updateSearchTerm: buildActionCreator(actionTypes.UPDATE_SEARCH),
 };
 
 export default actions;
