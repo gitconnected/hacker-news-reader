@@ -1,19 +1,16 @@
 import React from 'react';
 import Timeago from 'timeago.js';
 import getSiteHostname from 'utils/getSiteHostname';
+import getArticleLink, { HN_USER, HN_ITEM } from 'utils/getArticleLink';
 
 import { Item, Title, Host, ExernalLink, Description, CommentLink } from './styles';
 
 const timeago = Timeago();
 
-const HN_ROOT = 'https://news.ycombinator.com';
-const HN_ITEM = `${HN_ROOT}/item?id=`;
-const HN_USER = `${HN_ROOT}/user?id=`;
-
 const ListItem = ({ by, kids = [], score, url, title, id, type, time }) => {
-  const commentUrl = `${HN_ITEM}${id}`;
-  const link = type === 'story' ? commentUrl : url;
   const site = getSiteHostname(url) || 'news.ycombinator.com';
+  const link = getArticleLink({ url, id });
+  const commentUrl = `${HN_ITEM}${id}`;
 
   return (
     <Item>
