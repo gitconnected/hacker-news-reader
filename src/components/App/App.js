@@ -5,6 +5,7 @@ import Nav from 'components/Nav';
 import List from 'components/List';
 import Grid from 'components/Grid';
 import Loader from 'components/Loader';
+import Search from 'components/Search/Search.js';
 import { layouts, themes } from 'store/app/utils';
 import { colorsDark, colorsLight } from 'styles/palette';
 
@@ -29,6 +30,16 @@ class Home extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.theme !== this.props.theme) {
       this.setBodyBackgroundColor();
+    }
+    console.log(
+      'from componentDidUpdate, filtered stories:',
+      this.props.stories.filter(story => `${story.title}`.toUpperCase().indexOf('APPLE') >= 0),
+    );
+    const filteredStories = this.props.stories.filter(
+      story => `${story.title}`.toUpperCase().indexOf('APPLE') >= 0,
+    );
+    if (filteredStories.length < 7) {
+      this.fetchStories();
     }
   }
 
@@ -65,6 +76,7 @@ class Home extends Component {
                   (build your own)
                 </GithubLink>
               </Title>
+              <Search />
               <div>
                 <SocialLink href="https://twitter.com/gitconnected" target="blank">
                   <i className="fab fa-twitter" />
