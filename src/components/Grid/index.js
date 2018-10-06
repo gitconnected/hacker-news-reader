@@ -1,18 +1,9 @@
-import React, { Component } from 'react';
-import GridItem from 'components/GridItem';
+import { connect } from 'react-redux';
+import actions from 'store/story/actions';
+import Grid from './Grid';
 
-import { GridWrapper } from './styles';
+const mapStateToProps = state => ({
+  searchTerm: state.story.searchTerm,
+});
 
-class Grid extends Component {
-  render() {
-    return (
-      <GridWrapper>
-        {this.props.stories.map(story => (
-          <GridItem key={story.id} {...story} />
-        ))}
-      </GridWrapper>
-    );
-  }
-}
-
-export default Grid;
+export default connect(mapStateToProps)(Grid);

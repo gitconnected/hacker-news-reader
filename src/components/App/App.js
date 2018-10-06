@@ -5,6 +5,7 @@ import Nav from 'components/Nav';
 import List from 'components/List';
 import Grid from 'components/Grid';
 import Loader from 'components/Loader';
+import Search from 'components/Search';
 import { layouts, themes } from 'store/app/utils';
 import { colorsDark, colorsLight } from 'styles/palette';
 
@@ -30,6 +31,13 @@ class Home extends Component {
     if (prevProps.theme !== this.props.theme) {
       this.setBodyBackgroundColor();
     }
+
+    const filteredStories = this.props.stories.filter(
+      story => `${story.title}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0,
+    );
+    if (filteredStories.length < 7 && this.props.hasMoreStores) {
+      this.fetchStories();
+    }
   }
 
   setBodyBackgroundColor() {
@@ -42,13 +50,17 @@ class Home extends Component {
 
   fetchStories = () => {
     const { storyIds, page, fetchStories, isFetching } = this.props;
+    console.log('storyIds :', storyIds, 'page:', page);
     if (!isFetching) {
       fetchStories({ storyIds, page });
     }
   };
 
   render() {
-    const { stories, layout, theme, hasMoreStores } = this.props;
+    const { stories, layout, theme, hasMoreStores, searchTerm } = this.props;
+    const filteredStories = stories.filter(
+      story => `${story.title}`.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0,
+    );
     return (
       <ThemeProvider theme={theme === themes.light ? colorsLight : colorsDark}>
         <div>
@@ -64,6 +76,7 @@ class Home extends Component {
                   (build your own)
                 </GithubLink>
               </Title>
+              <Search />
               <div>
                 <SocialLink href="https://twitter.com/gitconnected" target="blank">
                   <i className="fab fa-twitter" />
@@ -83,7 +96,7 @@ class Home extends Component {
               </div>
             </TitleWrapper>
             <InfiniteScroll
-              dataLength={stories.length}
+              dataLength={filteredStories.length}
               next={this.fetchStories}
               hasMore={hasMoreStores}
               loader={<Loader />}
@@ -91,6 +104,11 @@ class Home extends Component {
                 height: '100%',
                 overflow: 'visible',
               }}
+              endMessage={
+                <p style={{ textAlign: 'center', color: '#848886' }}>
+                  <b>{filteredStories.length > 0 ? 'No more stories...' : 'No results found'}</b>
+                </p>
+              }
             >
               {layout === layouts.list ? <List stories={stories} /> : <Grid stories={stories} />}
             </InfiniteScroll>

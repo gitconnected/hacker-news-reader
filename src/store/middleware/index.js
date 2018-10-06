@@ -15,9 +15,7 @@ if (!isProd) {
   middlewareList.push(createLogger());
 }
 
-const middleware = compose(
-  applyMiddleware(...middlewareList),
-  devTool,
-);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const middleware = composeEnhancers(applyMiddleware(...middlewareList), devTool);
 
 export default middleware;
