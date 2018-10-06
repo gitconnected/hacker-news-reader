@@ -1,9 +1,19 @@
-import { connect } from 'react-redux';
-import actions from 'store/story/actions';
-import List from './List';
+import React, { Component } from 'react';
+import ListItem from 'components/ListItem';
 
-const mapStateToProps = state => ({
-  searchTerm: state.story.searchTerm,
-});
+import { ListWrapper } from './styles';
 
-export default connect(mapStateToProps)(List);
+class List extends Component {
+  render() {
+    const { stories } = this.props;
+    return (
+      <ListWrapper>
+        {stories.map(story => (
+          <ListItem key={story.id} {...story} />
+        ))}
+      </ListWrapper>
+    );
+  }
+}
+
+export default List;

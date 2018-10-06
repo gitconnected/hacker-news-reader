@@ -5,4 +5,5 @@ export const SearchInput = styled.input`
   color: ${({ theme }) => theme.textSecondary};
   outline: none;
   font-size: 14px;
+  margin: 10px 0;
 `;
