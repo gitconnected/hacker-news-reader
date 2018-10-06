@@ -10,15 +10,9 @@ import { colorsDark, colorsLight } from 'styles/palette';
 
 import { Wrapper, Title, TitleWrapper, GithubLink, SocialLink } from './styles';
 
-class Home extends Component {
+class App extends Component {
   static defaultProps = {
     stories: [],
-  };
-
-  state = {
-    storyIds: this.props.storyIds || [],
-    stories: this.props.stories || [],
-    page: this.props.page || 0,
   };
 
   componentDidMount() {
@@ -101,4 +95,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default App;
