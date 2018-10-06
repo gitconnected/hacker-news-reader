@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import actions from 'store/story/actions';
-import { hasMoreStoriesSelector } from 'store/story/selectors';
+import { hasMoreStoriesSelector, filteredStoriesSelector } from 'store/story/selectors';
 import App from './App';
 
 const mapStateToProps = state => ({
   layout: state.app.layout,
   searchTerm: state.story.searchTerm,
   theme: state.app.theme,
-  stories: state.story.stories,
+  stories: filteredStoriesSelector(state),
   page: state.story.page,
   storyIds: state.story.storyIds,
   isFetching: state.story.isFetching,

@@ -16,12 +16,6 @@ class Home extends Component {
     stories: [],
   };
 
-  state = {
-    storyIds: this.props.storyIds || [],
-    stories: this.props.stories || [],
-    page: this.props.page || 0,
-  };
-
   componentDidMount() {
     this.props.fetchStoriesFirstPage();
     this.setBodyBackgroundColor();
@@ -34,11 +28,7 @@ class Home extends Component {
 
     const approxStoryHeight = 70;
     const minimumOfStoriesToFillWindow = Math.floor(window.innerHeight / approxStoryHeight);
-    const filteredStories = this.props.stories.filter(
-      story => story.title.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0,
-    );
-    if (filteredStories.length < minimumOfStoriesToFillWindow && this.props.hasMoreStores) {
-
+    if (this.props.stories.length < minimumOfStoriesToFillWindow && this.props.hasMoreStores) {
       this.fetchStories();
     }
   }
@@ -53,7 +43,6 @@ class Home extends Component {
 
   fetchStories = () => {
     const { storyIds, page, fetchStories, isFetching } = this.props;
-    console.log('storyIds :', storyIds, 'page:', page);
     if (!isFetching) {
       fetchStories({ storyIds, page });
     }
@@ -61,9 +50,9 @@ class Home extends Component {
 
   render() {
     const { stories, layout, theme, hasMoreStores, searchTerm } = this.props;
-    const filteredStories = stories.filter(
+    /* const filteredStories = stories.filter(
       story => story.title.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0,
-    );
+    ); */
     return (
       <ThemeProvider theme={theme === themes.light ? colorsLight : colorsDark}>
         <div>
@@ -99,7 +88,7 @@ class Home extends Component {
               </div>
             </TitleWrapper>
             <InfiniteScroll
-              dataLength={filteredStories.length}
+              dataLength={stories.length}
               next={this.fetchStories}
               hasMore={hasMoreStores}
               loader={<Loader />}
@@ -109,9 +98,8 @@ class Home extends Component {
               }}
               endMessage={
                 <EndMessage>
-                  <b>{filteredStories.length > 0 ? 'No more stories...' : 'No results found'}</b>
+                  <b>{stories.length > 0 ? 'No more stories...' : 'No results found'}</b>
                 </EndMessage>
-
               }
             >
               {layout === layouts.list ? <List stories={stories} /> : <Grid stories={stories} />}
