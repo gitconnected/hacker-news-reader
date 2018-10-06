@@ -31,12 +31,14 @@ class Home extends Component {
     if (prevProps.theme !== this.props.theme) {
       this.setBodyBackgroundColor();
     }
+
     const approxStoryHeight = 70;
     const minimumOfStoriesToFillWindow = Math.floor(window.innerHeight / approxStoryHeight);
     const filteredStories = this.props.stories.filter(
       story => story.title.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0,
     );
     if (filteredStories.length < minimumOfStoriesToFillWindow && this.props.hasMoreStores) {
+
       this.fetchStories();
     }
   }
@@ -51,6 +53,7 @@ class Home extends Component {
 
   fetchStories = () => {
     const { storyIds, page, fetchStories, isFetching } = this.props;
+    console.log('storyIds :', storyIds, 'page:', page);
     if (!isFetching) {
       fetchStories({ storyIds, page });
     }
@@ -108,6 +111,7 @@ class Home extends Component {
                 <EndMessage>
                   <b>{filteredStories.length > 0 ? 'No more stories...' : 'No results found'}</b>
                 </EndMessage>
+
               }
             >
               {layout === layouts.list ? <List stories={stories} /> : <Grid stories={stories} />}
