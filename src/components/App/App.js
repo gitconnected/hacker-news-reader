@@ -9,7 +9,7 @@ import Search from 'components/Search';
 import { layouts, themes } from 'store/app/utils';
 import { colorsDark, colorsLight } from 'styles/palette';
 
-import { Wrapper, Title, TitleWrapper, GithubLink, SocialLink } from './styles';
+import { Wrapper, Title, TitleWrapper, GithubLink, SocialLink, EndMessage } from './styles';
 
 class Home extends Component {
   static defaultProps = {
@@ -31,11 +31,12 @@ class Home extends Component {
     if (prevProps.theme !== this.props.theme) {
       this.setBodyBackgroundColor();
     }
-
+    const approxStoryHeight = 70;
+    const minimumOfStoriesToFillWindow = Math.floor(window.innerHeight / approxStoryHeight);
     const filteredStories = this.props.stories.filter(
-      story => `${story.title}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0,
+      story => story.title.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0,
     );
-    if (filteredStories.length < 7 && this.props.hasMoreStores) {
+    if (filteredStories.length < minimumOfStoriesToFillWindow && this.props.hasMoreStores) {
       this.fetchStories();
     }
   }
@@ -50,7 +51,6 @@ class Home extends Component {
 
   fetchStories = () => {
     const { storyIds, page, fetchStories, isFetching } = this.props;
-    console.log('storyIds :', storyIds, 'page:', page);
     if (!isFetching) {
       fetchStories({ storyIds, page });
     }
@@ -59,7 +59,7 @@ class Home extends Component {
   render() {
     const { stories, layout, theme, hasMoreStores, searchTerm } = this.props;
     const filteredStories = stories.filter(
-      story => `${story.title}`.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0,
+      story => story.title.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0,
     );
     return (
       <ThemeProvider theme={theme === themes.light ? colorsLight : colorsDark}>
@@ -105,9 +105,9 @@ class Home extends Component {
                 overflow: 'visible',
               }}
               endMessage={
-                <p style={{ textAlign: 'center', color: '#848886' }}>
+                <EndMessage>
                   <b>{filteredStories.length > 0 ? 'No more stories...' : 'No results found'}</b>
-                </p>
+                </EndMessage>
               }
             >
               {layout === layouts.list ? <List stories={stories} /> : <Grid stories={stories} />}
