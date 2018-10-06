@@ -29,7 +29,7 @@ const story = (state = getInitialState(), { type, payload }) => {
         page: state.page + 1,
         isFetching: false,
       };
-    case `${actionTypes.UPDATE_SEARCH}`:
+    case actionTypes.UPDATE_SEARCH:
       return {
         ...state,
         ...payload,

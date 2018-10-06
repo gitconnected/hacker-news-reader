@@ -59,3 +59,8 @@ export const GithubLink = styled.a`
     color: ${({ theme }) => theme.textSecondary};
   }
 `;
+
+export const EndMessage = styled.p`
+  text-align: center;
+  color: #848886;
+`;
