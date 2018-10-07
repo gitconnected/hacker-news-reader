@@ -1,7 +1,5 @@
 import { injectGlobal } from 'styled-components';
 
-// background-color: ${({ theme }) => theme.background};
-
 const setGlobalStyles = () =>
   injectGlobal`
     * {
