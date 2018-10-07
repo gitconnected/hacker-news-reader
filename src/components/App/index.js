@@ -5,7 +5,6 @@ import App from './App';
 
 const mapStateToProps = state => ({
   layout: state.app.layout,
-  searchTerm: state.story.searchTerm,
   theme: state.app.theme,
   stories: filteredStoriesSelector(state),
   page: state.story.page,
