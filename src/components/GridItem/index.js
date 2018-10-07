@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import getSiteHostname from 'utils/getSiteHostname';
 import getArticleLink from 'utils/getArticleLink';
 
@@ -21,6 +22,12 @@ const GridItem = ({ url, title, id }) => {
       </Item>
     </a>
   );
+};
+
+GridItem.propTypes = {
+  url: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default GridItem;
