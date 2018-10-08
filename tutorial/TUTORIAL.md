@@ -92,7 +92,9 @@ Notice that since we set the `NODE_PATH` previously, we can import `App` using `
 
 Now we’re ready to start our development environment with our core structure in place. Run the following command to start the app, and you should see it on `[http://localhost:3000](http://localhost:3000.)`. Not much to look at yet, but we’ll get there :)
 
+```
 yarn start
+```
 
 ![](https://cdn-images-1.medium.com/max/1600/1*kerMzK7dPowXiHRJx90Zfg.png)
 
