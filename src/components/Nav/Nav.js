@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { layouts, themes } from 'store/app/utils';
 
 import { Header, Spacer, NavSection, Content, Icon, Logo, ExternalLink } from './styles';
@@ -37,5 +38,12 @@ const Nav = ({ layout, theme, setLayout, setTheme }) => (
     <Spacer />
   </div>
 );
+
+Nav.propTypes = {
+  layout: PropTypes.string.isRequired,
+  theme: PropTypes.string.isRequired,
+  setLayout: PropTypes.func.isRequired,
+  setTheme: PropTypes.func.isRequired,
+};
 
 export default Nav;
