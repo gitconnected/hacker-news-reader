@@ -1,4 +1,4 @@
-# React & Redux Tutorial | Build a Hacker News Clone
+# React & Redux Tutorial - Build a Hacker News Clone
 
 ## *Build a production React project using Redux and Styled Components. Deploy the app using GitHub pages.*
 
