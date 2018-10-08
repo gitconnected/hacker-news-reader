@@ -296,6 +296,11 @@ Inside the `styles.js` file add the following code.
 
 The [@keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) API is a CSS technique to define animations. The Above code shows the abstraction for it in Styled Components. We will have 3 dots on the screen that have their opacity start at 0.2, increase to 1, and then return to 0.2. We add an animation delay to the second and third dot which gives the offset bouncing appearance.
 
+
+Our `Loader` component will just be our `Animation` styled component with 3 spans containing periods.
+
+![](https://cdn-images-1.medium.com/max/800/1*OEvcjnFwj7x6OMsue2rTKQ.png)
+
 Now we are ready to add the functionality to our list. Import the infinite scroll module and our `Loader` in the `App` component. We will also create a `fetchStories` callback that will call the `fetchStories` prop to dispatch the request for the next page. We only call the `fetchStories` dispatch prop if the `isFetching` is false. Otherwise we could fetch the same page multiple times. Your `src/components/App/App.js` should now look like the following.
 
 ![](https://cdn-images-1.medium.com/max/1600/1*FPavhHcReHylbh6qVythUA.png)
