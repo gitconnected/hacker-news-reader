@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Nav from 'components/Nav';
@@ -14,6 +15,18 @@ import { Wrapper, Title, TitleWrapper, GithubLink, SocialLink, EndMessage } from
 class Home extends Component {
   static defaultProps = {
     stories: [],
+  };
+
+  static propTypes = {
+    layout: PropTypes.string.isRequired,
+    theme: PropTypes.string.isRequired,
+    stories: PropTypes.array.isRequired,
+    page: PropTypes.number.isRequired,
+    storyIds: PropTypes.array.isRequired,
+    isFetching: PropTypes.bool.isRequired,
+    hasMoreStores: PropTypes.bool.isRequired,
+    fetchStories: PropTypes.func.isRequired,
+    fetchStoriesFirstPage: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -49,10 +62,7 @@ class Home extends Component {
   };
 
   render() {
-    const { stories, layout, theme, hasMoreStores, searchTerm } = this.props;
-    /* const filteredStories = stories.filter(
-      story => story.title.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0,
-    ); */
+    const { stories, layout, theme, hasMoreStores } = this.props;
     return (
       <ThemeProvider theme={theme === themes.light ? colorsLight : colorsDark}>
         <div>
