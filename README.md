@@ -46,7 +46,7 @@ Join the #hacktoberfest channel in our [community Slack](https://community.gitco
 Follow along and move your own pace using the [gitconnected tutorial](https://gitconnected.com/courses/learn-react-redux-tutorial-build-a-hacker-news-clone).
     
 **Video Tutorial**
-http://www.youtube.com/watch?v=oGB_VPrld0U
+http://www.youtube.com/watch?v=oGB_VPrld0U&index=2&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3
 [![React Tutorial](http://img.youtube.com/vi/oGB_VPrld0U/0.jpg)](http://www.youtube.com/watch?v=oGB_VPrld0U&index=2&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3)
 
 ## Getting Started
