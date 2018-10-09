@@ -1,13 +1,35 @@
 {
-  "title": "React & Redux Tutorial - Build a Hacker News Clone",
+  "title": "React & Redux Tutorial—Build a Hacker News Clone",
   "description": "Learn React by building a production React project using Redux and Styled Components. Deploy the app using GitHub pages.",
-  "createdAt": 1539004024128,
-  "publishedAt": 1539004024128,
-  "updatedAt": 1539004024128,
-  "image": {},
-  "thumbnail": "",
-  "keywords": [],
-  "author": {},
-  "creator": "",
-  "publisher": {}
+  "createdAt": 1539091633902,
+  "publishedAt": 1539091633902,
+  "updatedAt": 1539091633902,
+  "image": {
+    "@type": "ImageObject",
+    "width": 480,
+    "height": 360,
+    "url": "https://cdn-images-1.medium.com/max/960/0*3EzhXfHzHuNx7eML.jpg"
+  },
+  "socialImage": "https://cdn-images-1.medium.com/max/960/0*3EzhXfHzHuNx7eML.jpg",
+  "url": "https://gitconnected.com/courses/learn-react-redux-tutorial-build-a-hacker-news-clone",
+  "thumbnail": "https://cdn-images-1.medium.com/max/960/0*3EzhXfHzHuNx7eML.jpg",
+  "keywords": [
+     "Tag:React",
+    "Tag:JavaScript",
+    "Tag:Web Development",
+    "Tag:Technology",
+    "Tag:Startup",
+    "Publication:gitconnected",
+    "LockedPostSource:0",
+    "Elevated:false",
+    "LayerCake:0"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Trey Huffine",
+    "url": "https://gitconnected.com/treyhuffine"
+  },
+  "creator": [
+    "Trey Huffine"
+  ]
 }
