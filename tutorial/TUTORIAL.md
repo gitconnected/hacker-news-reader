@@ -90,7 +90,7 @@ Now, open `src/index.js` (the root file of your project) and update the content 
 
 Notice that since we set the `NODE_PATH` previously, we can import `App` using `components/App` and `setGlobalStyles` using `styles/globals`. Execute the `setGlobalStyles()` function to apply them to the app.
 
-Now we’re ready to start our development environment with our core structure in place. Run the following command to start the app, and you should see it on `[http://localhost:3000](http://localhost:3000.)`. Not much to look at yet, but we’ll get there :)
+Now we’re ready to start our development environment with our core structure in place. Run the following command to start the app, and you should see it on `http://localhost:3000.`. Not much to look at yet, but we’ll get there :)
 
 ```
 yarn start
