@@ -47,7 +47,7 @@ Follow along and move your own pace using the [gitconnected tutorial](https://gi
     
 **Video Tutorial**
 http://www.youtube.com/watch?v=oGB_VPrld0U
-[![React Tutorial](http://img.youtube.com/vi/oGB_VPrld0U/0.jpg)](http://www.youtube.com/watch?v=oGB_VPrld0U)
+[![React Tutorial](http://img.youtube.com/vi/oGB_VPrld0U/0.jpg)](http://www.youtube.com/watch?v=oGB_VPrld0U&index=2&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3)
 
 ## Getting Started
 
