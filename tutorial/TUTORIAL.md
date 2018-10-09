@@ -12,9 +12,9 @@ In this tutorial, we are going to build a production-quality Hacker News clone. 
 
 ![](https://cdn-images-1.medium.com/max/2000/1*Ufu70cs08PyXKaM2Wb6D0w.png)
 
-If you prefer video, you can also follow along with this tutorial on our YouTube. http://www.youtube.com/watch?v=oGB_VPrld0U
+If you prefer video, you can also follow along with this tutorial on our YouTube. http://www.youtube.com/watch?v=oGB_VPrld0U&index=2&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3
 
-[![React Tutorial](http://img.youtube.com/vi/oGB_VPrld0U/0.jpg)](http://www.youtube.com/watch?v=oGB_VPrld0U)
+[![React Tutorial](http://img.youtube.com/vi/oGB_VPrld0U/0.jpg)](http://www.youtube.com/watch?v=oGB_VPrld0U&index=2&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3)
 
 ### Initialize the Project
 
