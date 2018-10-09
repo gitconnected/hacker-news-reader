@@ -148,7 +148,7 @@ Now that Redux is initialized, we can begin working on our UI. First, let’s de
 
 ![](https://cdn-images-1.medium.com/max/1600/1*P2P94sWY44UGWgEmnp93fg.png)
 
-Return to our `src/components/App` folder. Inside `index.js`, we update the contents to be the following.
+Return to our `src/components/App` folder. Inside `index.js`, we update the content to be the following.
 
 ![](https://cdn-images-1.medium.com/max/1600/1*CKXnrGJRjg0KF_h8k8nXCw.png)
 
@@ -160,7 +160,7 @@ We use the `ThemeProvider` component from `styled-components`. This provides fun
 
 This creates `div` for the page which we call `Wrapper` and an `h1` for the page as the component `Title`. The `styled-components` syntax creates a component using the HTML element that you specify after after the `styled` object. You use a string to define the CSS properties of that component.
 
-Notice on line 20, we use our `theme` prop. A function containing `props` is as an argument is injected by `styled-components` into the styling string allowing us to extract properties or add logic to construct styles, abstracting this away from the component that uses them.
+Notice on line 20, we use our `theme` prop. A function containing `props` as an argument is injected by `styled-components` into the styling string allowing us to extract properties or add logic to construct styles, abstracting this away from the component that uses them.
 
 Next we create our `List` component which will contain our Hacker News stories. Create a `src/components/List` folder and add an `index.js` and `styles.js` files. Inside `index.js` add the following.
 
