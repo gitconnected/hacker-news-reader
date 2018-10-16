@@ -6,7 +6,11 @@ import { GridWrapper } from './styles';
 
 class Grid extends Component {
   static propTypes = {
-    stories: PropTypes.array.isRequired,
+    stories: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+      }),
+    ).isRequired,
   };
 
   render() {
