@@ -39,6 +39,16 @@ Join the #hacktoberfest channel in our [community Slack](https://community.gitco
 -   Create React App to bootstrap a project
 -   localStorage for persisting state
 
+
+## Step-by-step Tutorial
+
+**Written tutorial**
+Follow along and move your own pace using the [gitconnected tutorial](https://gitconnected.com/courses/learn-react-redux-tutorial-build-a-hacker-news-clone).
+    
+**Video Tutorial**
+http://www.youtube.com/watch?v=oGB_VPrld0U&index=2&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3
+[![React Tutorial](http://img.youtube.com/vi/oGB_VPrld0U/0.jpg)](http://www.youtube.com/watch?v=oGB_VPrld0U&index=2&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3)
+
 ## Getting Started
 
 Run the completed project to understand what you're building
@@ -68,10 +78,6 @@ you can host it in any manner than you wish. GitHub pages is a great option. The
 
 Join the [Slack channel](https://community.gitconnected.com) to
 collaborate and get help. This project can be difficult, so make sure you work on it with some friends!
-
-## Step-by-step Tutorial
-
-Almost complete, check back soon!
 
 ## Your Solution!
 
