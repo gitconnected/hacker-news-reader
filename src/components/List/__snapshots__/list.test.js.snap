@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <List
+    stories={
+        Array [
+            Object {
+              "by": "magoghm",
+              "descendants": 41,
+              "id": 18277531,
+              "kids": Array [
+                18277926,
+                18277900,
+                18278074,
+                18277699,
+                18277859,
+                18277835,
+                18277864,
+              ],
+              "score": 79,
+              "time": 1540236259,
+              "title": "AWS CEO Jassy follows Apple in calling for retraction of Chinese spy chip story",
+              "type": "story",
+              "url": "https://www.cnbc.com/2018/10/22/aws-ceo-jassy-follows-apple-calls-for-spy-chip-story-retraction.html",
+            },
+            Object {
+              "by": "NN88",
+              "descendants": 72,
+              "id": 18276862,
+              "kids": Array [
+                18277851,
+                18277773,
+                18277336,
+                18277638,
+                18277523,
+                18277196,
+                18277173,
+                18277302,
+                18277409,
+                18277700,
+                18277870,
+                18277390,
+                18277646,
+                18277581,
+                18277721,
+                18277324,
+                18277689,
+                18277514,
+                18277389,
+              ],
+              "score": 105,
+              "time": 1540231727,
+              "title": "The Secretive Business of Facial-Recognition Software in Retail Stores",
+              "type": "story",
+              "url": "http://nymag.com/intelligencer/2018/10/retailers-are-using-facial-recognition-technology-too.html",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <ListItem
+          by="magoghm"
+          descendants={41}
+          id={18277531}
+          kids={
+                    Array [
+                              18277926,
+                              18277900,
+                              18278074,
+                              18277699,
+                              18277859,
+                              18277835,
+                              18277864,
+                            ]
+          }
+          score={79}
+          time={1540236259}
+          title="AWS CEO Jassy follows Apple in calling for retraction of Chinese spy chip story"
+          type="story"
+          url="https://www.cnbc.com/2018/10/22/aws-ceo-jassy-follows-apple-calls-for-spy-chip-story-retraction.html"
+/>,
+        <ListItem
+          by="NN88"
+          descendants={72}
+          id={18276862}
+          kids={
+                    Array [
+                              18277851,
+                              18277773,
+                              18277336,
+                              18277638,
+                              18277523,
+                              18277196,
+                              18277173,
+                              18277302,
+                              18277409,
+                              18277700,
+                              18277870,
+                              18277390,
+                              18277646,
+                              18277581,
+                              18277721,
+                              18277324,
+                              18277689,
+                              18277514,
+                              18277389,
+                            ]
+          }
+          score={105}
+          time={1540231727}
+          title="The Secretive Business of Facial-Recognition Software in Retail Stores"
+          type="story"
+          url="http://nymag.com/intelligencer/2018/10/retailers-are-using-facial-recognition-technology-too.html"
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "18277531",
+        "nodeType": "function",
+        "props": Object {
+          "by": "magoghm",
+          "descendants": 41,
+          "id": 18277531,
+          "kids": Array [
+            18277926,
+            18277900,
+            18278074,
+            18277699,
+            18277859,
+            18277835,
+            18277864,
+          ],
+          "score": 79,
+          "time": 1540236259,
+          "title": "AWS CEO Jassy follows Apple in calling for retraction of Chinese spy chip story",
+          "type": "story",
+          "url": "https://www.cnbc.com/2018/10/22/aws-ceo-jassy-follows-apple-calls-for-spy-chip-story-retraction.html",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "18276862",
+        "nodeType": "function",
+        "props": Object {
+          "by": "NN88",
+          "descendants": 72,
+          "id": 18276862,
+          "kids": Array [
+            18277851,
+            18277773,
+            18277336,
+            18277638,
+            18277523,
+            18277196,
+            18277173,
+            18277302,
+            18277409,
+            18277700,
+            18277870,
+            18277390,
+            18277646,
+            18277581,
+            18277721,
+            18277324,
+            18277689,
+            18277514,
+            18277389,
+          ],
+          "score": 105,
+          "time": 1540231727,
+          "title": "The Secretive Business of Facial-Recognition Software in Retail Stores",
+          "type": "story",
+          "url": "http://nymag.com/intelligencer/2018/10/retailers-are-using-facial-recognition-technology-too.html",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <ListItem
+            by="magoghm"
+            descendants={41}
+            id={18277531}
+            kids={
+                        Array [
+                                    18277926,
+                                    18277900,
+                                    18278074,
+                                    18277699,
+                                    18277859,
+                                    18277835,
+                                    18277864,
+                                  ]
+            }
+            score={79}
+            time={1540236259}
+            title="AWS CEO Jassy follows Apple in calling for retraction of Chinese spy chip story"
+            type="story"
+            url="https://www.cnbc.com/2018/10/22/aws-ceo-jassy-follows-apple-calls-for-spy-chip-story-retraction.html"
+/>,
+          <ListItem
+            by="NN88"
+            descendants={72}
+            id={18276862}
+            kids={
+                        Array [
+                                    18277851,
+                                    18277773,
+                                    18277336,
+                                    18277638,
+                                    18277523,
+                                    18277196,
+                                    18277173,
+                                    18277302,
+                                    18277409,
+                                    18277700,
+                                    18277870,
+                                    18277390,
+                                    18277646,
+                                    18277581,
+                                    18277721,
+                                    18277324,
+                                    18277689,
+                                    18277514,
+                                    18277389,
+                                  ]
+            }
+            score={105}
+            time={1540231727}
+            title="The Secretive Business of Facial-Recognition Software in Retail Stores"
+            type="story"
+            url="http://nymag.com/intelligencer/2018/10/retailers-are-using-facial-recognition-technology-too.html"
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "18277531",
+          "nodeType": "function",
+          "props": Object {
+            "by": "magoghm",
+            "descendants": 41,
+            "id": 18277531,
+            "kids": Array [
+              18277926,
+              18277900,
+              18278074,
+              18277699,
+              18277859,
+              18277835,
+              18277864,
+            ],
+            "score": 79,
+            "time": 1540236259,
+            "title": "AWS CEO Jassy follows Apple in calling for retraction of Chinese spy chip story",
+            "type": "story",
+            "url": "https://www.cnbc.com/2018/10/22/aws-ceo-jassy-follows-apple-calls-for-spy-chip-story-retraction.html",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "18276862",
+          "nodeType": "function",
+          "props": Object {
+            "by": "NN88",
+            "descendants": 72,
+            "id": 18276862,
+            "kids": Array [
+              18277851,
+              18277773,
+              18277336,
+              18277638,
+              18277523,
+              18277196,
+              18277173,
+              18277302,
+              18277409,
+              18277700,
+              18277870,
+              18277390,
+              18277646,
+              18277581,
+              18277721,
+              18277324,
+              18277689,
+              18277514,
+              18277389,
+            ],
+            "score": 105,
+            "time": 1540231727,
+            "title": "The Secretive Business of Facial-Recognition Software in Retail Stores",
+            "type": "story",
+            "url": "http://nymag.com/intelligencer/2018/10/retailers-are-using-facial-recognition-technology-too.html",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
