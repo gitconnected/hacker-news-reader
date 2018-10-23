@@ -74,3 +74,20 @@ export const listItemData = {
   type: 'story',
   time: time,
 };
+
+export const gridItemData = {
+  url:
+    'http://nymag.com/intelligencer/2018/10/retailers-are-using-facial-recognition-technology-too.html',
+  title: 'The Secretive Business of Facial-Recognition Software in Retail Stores',
+  id: 18276862,
+};
+
+export const AppData = {
+  hasMoreStores: false,
+  isFetching: false,
+  layout: 'list',
+  page: 1,
+  stories: stories,
+  storyIds: [18277531, 18276862],
+  theme: 'dark',
+};

@@ -55,6 +55,7 @@ class App extends Component {
   };
 
   render() {
+    console.log('App props : ', this.props);
     const { stories, layout, theme, hasMoreStores } = this.props;
     return (
       <ThemeProvider theme={theme === themes.light ? colorsLight : colorsDark}>
