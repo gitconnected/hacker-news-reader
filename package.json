@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-infinite-scroll-component": "^4.2.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.5",
+    "react-test-renderer": "^16.5.2",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
@@ -20,7 +23,8 @@
   "scripts": {
     "start": "NODE_PATH=src react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "NODE_PATH=src react-scripts test --env=jsdom",
+    "coverage": "npm run test -- --coverage",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint '**/*.{js,jsx}' --quiet",
     "format": "./node_modules/.bin/prettier --write \"src/**/*.{js,jsx}\""

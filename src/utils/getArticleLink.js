@@ -5,7 +5,6 @@ export const HN_USER = `${HN_ROOT}/user?id=`;
 const getArticleLink = ({ url, id }) => {
   const commentUrl = `${HN_ITEM}${id}`;
   const link = !!url ? url : commentUrl;
-
   return link;
 };
 
