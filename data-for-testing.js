@@ -91,3 +91,8 @@ export const AppData = {
   storyIds: [18277531, 18276862],
   theme: 'dark',
 };
+
+export const NavData = {
+  layout: 'list',
+  theme: 'dark',
+};

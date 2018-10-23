@@ -24,6 +24,7 @@
     "start": "NODE_PATH=src react-scripts start",
     "build": "react-scripts build",
     "test": "NODE_PATH=src react-scripts test --env=jsdom",
+    "coverage": "npm run test -- --coverage",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint '**/*.{js,jsx}' --quiet",
     "format": "./node_modules/.bin/prettier --write \"src/**/*.{js,jsx}\""
