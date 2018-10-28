@@ -23,12 +23,24 @@ const actions = {
         .catch(err => dispatch(request.failure(err)));
     },
   ),
+
   fetchStories: buildRequestCreator(actionTypes.FETCH_STORIES, ({ request, payload, dispatch }) => {
     const { storyIds, page } = payload;
     dispatch(request.request(payload));
     return hackerNewsApi
       .getStoriesByPage(storyIds, page)
       .then(stories => dispatch(request.success({ stories })))
+      .catch(err => dispatch(request.failure(err)));
+  }),
+
+  fetchHits: buildRequestCreator(actionTypes.FETCH_STORIES, ({ request, payload, dispatch }) => {
+    const { page } = payload;
+    dispatch(request.request(payload));
+    return hackerNewsApi
+      .getFromPage(page)
+      .then(({ hits, nbPages }) => {
+        dispatch(request.success({ stories: hits, nbPages, page }));
+      })
       .catch(err => dispatch(request.failure(err)));
   }),
 };

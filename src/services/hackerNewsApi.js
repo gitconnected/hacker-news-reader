@@ -1,7 +1,7 @@
 import ApiService from './Api';
 
 const JSON_QUERY = '.json?print=pretty';
-const BASE_URL = 'https://hacker-news.firebaseio.com/v0';
+const BASE_URL = 'http://hn.algolia.com/api/v1';
 const client = new ApiService({ baseURL: BASE_URL });
 
 const hackerNewsApi = {};
@@ -18,5 +18,7 @@ hackerNewsApi.getStoriesByPage = (ids, page) => {
   const storyPromises = activeIds.map(id => hackerNewsApi.getStory(id));
   return Promise.all(storyPromises);
 };
+
+hackerNewsApi.getFromPage = page => client.get(`/search?page=${page}&tags=(story,poll)`);
 
 export default hackerNewsApi;
