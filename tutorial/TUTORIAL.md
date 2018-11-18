@@ -2,8 +2,6 @@
 
 ## *Build a production React project using Redux and Styled Components. Deploy the app using GitHub pages.*
 
-This is a step-by-step solution for the [gitconnected Hacktoberfest project](https://gitconnected.com/hacktoberfest).
-
 In this tutorial, we are going to build a production-quality Hacker News clone. We will walk through the steps of initializing the application, adding [Redux](https://redux.js.org/) to manage state, building the UI in React, and deploying the solution to GitHub pages. We will style the application using [styled-components](https://www.styled-components.com/) and call the public [Hacker News API](https://github.com/HackerNews/API) using the [axios](https://github.com/axios/axios) library.
 
 [**GitHub — View Source**](https://github.com/gitconnected/hacker-news-reader)
