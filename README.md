@@ -1,4 +1,4 @@
-### Created by [gitconnected](https://gitconnected.com)
+### Created by [gitconnected - Developer News and Coding Tutorials](https://gitconnected.com)
 
 ## Project Overview
 
