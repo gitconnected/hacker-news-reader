@@ -14,7 +14,7 @@ class List extends Component {
     return (
       <ListWrapper>
         {stories.map(story => (
-          <ListItem key={story.id} {...story} />
+          <ListItem key={story.objectID} {...story} />
         ))}
       </ListWrapper>
     );

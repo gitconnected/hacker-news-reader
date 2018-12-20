@@ -8,10 +8,11 @@ import { Item, Title, Host, ExernalLink, Description, CommentLink } from './styl
 
 const timeago = Timeago();
 
-const ListItem = ({ by, kids = [], score, url, title, id, type, time }) => {
+const ListItem = props => {
+  const { author, num_comments, points, url, title, objectID, created_at } = props;
   const site = getSiteHostname(url) || 'news.ycombinator.com';
-  const link = getArticleLink({ url, id });
-  const commentUrl = `${HN_ITEM}${id}`;
+  const link = getArticleLink({ url, objectID });
+  const commentUrl = `${HN_ITEM}${objectID}`;
 
   return (
     <Item>
@@ -20,14 +21,19 @@ const ListItem = ({ by, kids = [], score, url, title, id, type, time }) => {
           {title} <Host>({site})</Host>
         </Title>
       </ExernalLink>
+
       <Description>
-        {score} points by{' '}
-        <CommentLink href={`${HN_USER}${by}`} rel="nofollow noreferrer noopener" target="_blank">
-          {by}
+        {points} points by{' '}
+        <CommentLink
+          href={`${HN_USER}${author}`}
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          {author}
         </CommentLink>{' '}
-        {timeago.format(new Date(time * 1000).toISOString())} {' | '}
+        {timeago.format(new Date(created_at).toISOString())} {' | '}
         <CommentLink href={commentUrl} rel="nofollow noreferrer noopener" target="_blank">
-          {kids.length} Comments
+          {num_comments} Comments
         </CommentLink>
       </Description>
     </Item>
@@ -35,14 +41,13 @@ const ListItem = ({ by, kids = [], score, url, title, id, type, time }) => {
 };
 
 ListItem.propTypes = {
-  by: PropTypes.string.isRequired,
-  kids: PropTypes.array,
-  score: PropTypes.number.isRequired,
+  author: PropTypes.string.isRequired,
+  num_comments: PropTypes.number,
+  points: PropTypes.number.isRequired,
   url: PropTypes.string,
   title: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  type: PropTypes.string.isRequired,
-  time: PropTypes.number.isRequired,
+  objectID: PropTypes.string.isRequired,
+  created_at: PropTypes.string.isRequired,
 };
 
 export default ListItem;

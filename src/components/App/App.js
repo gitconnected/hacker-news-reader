@@ -24,12 +24,12 @@ class App extends Component {
     storyIds: PropTypes.array.isRequired,
     isFetching: PropTypes.bool.isRequired,
     hasMoreStores: PropTypes.bool.isRequired,
-    fetchStories: PropTypes.func.isRequired,
-    fetchStoriesFirstPage: PropTypes.func.isRequired,
+    fetchHits: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
-    this.props.fetchStoriesFirstPage();
+    const { page, fetchHits } = this.props;
+    fetchHits({ page });
     this.setBodyBackgroundColor();
   }
 
@@ -48,14 +48,16 @@ class App extends Component {
   }
 
   fetchStories = () => {
-    const { storyIds, page, fetchStories, isFetching } = this.props;
+    const { page, fetchHits, isFetching } = this.props;
     if (!isFetching) {
-      fetchStories({ storyIds, page });
+      fetchHits({ page: page + 1 });
     }
   };
 
   render() {
     const { stories, layout, theme, hasMoreStores } = this.props;
+    const title = '// Hacker News Reader';
+
     return (
       <ThemeProvider theme={theme === themes.light ? colorsLight : colorsDark}>
         <div>
@@ -63,7 +65,7 @@ class App extends Component {
           <Wrapper>
             <TitleWrapper>
               <Title>
-                // Hacker News Reader{' '}
+                <span style={{ marginRight: 5 }}>{title}</span>
                 <GithubLink
                   href="https://github.com/gitconnected/hacker-news-reader"
                   target="_blank"

@@ -8,6 +8,7 @@ import { Item, Card, Image, Content, Title, Source } from './styles';
 const GridItem = ({ url, title, id }) => {
   const site = getSiteHostname(url) || 'news.ycombinator.com';
   const link = getArticleLink({ url, id });
+  const sourceStr = `// ${site}`;
 
   return (
     <a href={link} target="_blank" rel="nofollow noreferrer nofollow">
@@ -16,7 +17,7 @@ const GridItem = ({ url, title, id }) => {
           <Image src="https://miro.medium.com/max/1176/1*F9RzuXseG1VrTjFJd403gw.png" />
           <Content>
             <Title>{title}</Title>
-            <Source>// {site}</Source>
+            <Source>{sourceStr}</Source>
           </Content>
         </Card>
       </Item>

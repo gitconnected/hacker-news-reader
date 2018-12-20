@@ -4,6 +4,7 @@ const getInitialState = () => ({
   storyIds: [],
   stories: [],
   page: 0,
+  nbPages: 0,
   isFetching: false,
   error: '',
 });
@@ -25,7 +26,8 @@ const story = (state = getInitialState(), { type, payload }) => {
       return {
         ...state,
         stories: [...state.stories, ...payload.stories],
-        page: state.page + 1,
+        page: payload.page,
+        nbPages: payload.nbPages,
         isFetching: false,
       };
     default:
