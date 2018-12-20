@@ -12,12 +12,12 @@
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.5",
     "react-test-renderer": "^16.5.2",
+    "react-timeago": "^4.1.9",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "styled-components": "^3.4.9",
-    "timeago.js": "^4.0.0-beta.1",
     "url": "^0.11.0"
   },
   "scripts": {
