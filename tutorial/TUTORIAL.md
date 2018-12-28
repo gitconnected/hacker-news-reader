@@ -25,8 +25,8 @@ npm i -g create-react-app
 Initialize your project by running the command below. `create-react-app` installs all the essential packages to build a React application and it has default scripts to manage development and building for production.
 
 ```
-create-react-app hn-clone  
-# Wait for everything to finish...  
+create-react-app hn-clone
+# Wait for everything to finish...
 cd hn-clone
 ```
 
@@ -39,10 +39,10 @@ yarn add redux styled-components react-redux redux-logger redux-thunk axios
 `create-react-app` uses the `NODE_PATH` environment variable to create absolute paths. We can declare environment variables in the `.env` file and `create-react-app` [will recognize it](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-development-environment-variables-in-env) and apply it using the [dotenv library](https://www.npmjs.com/package/dotenv).
 
 ```
-# Create a .env file using the touch command  
+# Create a .env file using the touch command
 touch .env
 
-# Inside the .env file add:  
+# Inside the .env file add:
 # NODE_PATH=src
 ```
 
@@ -72,11 +72,9 @@ Palette will contain the groupings of colors we will use in the application and 
 
 ![](https://cdn-images-1.medium.com/max/1600/1*Zr48tSzc6mcC981FWblX3g.png)
 
-The `globals.js` is used to generate our default base styling shared across the app. The `injectGlobal` method from `styled-components` should be used sparingly, but it is useful for app-level styles.
+The `globals.js` is used to generate our default base styling shared across the app. The `createGlobalStyle` method from `styled-components` should be used sparingly, but it is useful for app-level styles. It generates a new component with globally applied styling.
 
-> NOTE: The `injectGlobal` API is being replaced by `createGlobalStyle` in styled-components v4.
-
-![](https://cdn-images-1.medium.com/max/1600/1*WaP3vgmtvQxpQQ0hC9j3og.png)
+![](https://cdn-images-1.medium.com/max/1600/1*7XWGExoj7Obt5PpW3MIS6Q.png)
 
 Inside the `components` folder create an `App` folder. Move the default CRA files to this location and rename `App.js` to `index.js`. This allows us to import `components/App`.
 
@@ -84,9 +82,9 @@ Inside the `components` folder create an `App` folder. Move the default CRA file
 
 Now, open `src/index.js` (the root file of your project) and update the content to use our new folder structure.
 
-![](https://cdn-images-1.medium.com/max/1600/1*J4iZthOacnUvdXpGcKXWHw.png)
+![](https://cdn-images-1.medium.com/max/1600/1*z6KYkt6aLZubEPWYBFPjRA.png)
 
-Notice that since we set the `NODE_PATH` previously, we can import `App` using `components/App` and `setGlobalStyles` using `styles/globals`. Execute the `setGlobalStyles()` function to apply them to the app.
+Notice that since we set the `NODE_PATH` previously, we can import `App` using `components/App` and `GlobalStyles` using `styles/globals`. In styled-components v4, this is now a component which we will include in parallel to our `<App />` component to apply styles globally.
 
 Now we’re ready to start our development environment with our core structure in place. Run the following command to start the app, and you should see it on `http://localhost:3000.`. Not much to look at yet, but we’ll get there :)
 
@@ -134,7 +132,7 @@ For the brevity of this article, if you need a further understanding of the fund
 
 Return to the `src/index.js`, and now we can update it to connect our app to Redux. Add an import for `Provider` and update your render method to look like the following.
 
-![](https://cdn-images-1.medium.com/max/1600/1*3n6O0LIUSTCVwFt8uduNMw.png)
+![](https://cdn-images-1.medium.com/max/1600/1*0x17EAhOQPRPa9t2MmX7MQ.png)
 
 And that should be all you need to get Redux integrated with the app! Return to `http://localhost:3000`, and you should see the following when you open your Chrome console.
 

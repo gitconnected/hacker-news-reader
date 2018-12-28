@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from 'store';
 import App from 'components/App';
-import setGlobalStyles from 'styles/globals';
+import GlobalStyles from 'styles/globals';
 import loadInitialState from 'store/middleware/localStorageMiddleware/loadInitialState';
 import registerServiceWorker from './registerServiceWorker';
-
-setGlobalStyles();
 
 const renderApp = () => {
   const initialState = loadInitialState();
@@ -20,7 +18,10 @@ const renderApp = () => {
 
   ReactDOM.render(
     <Provider store={store}>
-      <App />
+      <div>
+        <GlobalStyles />
+        <App />
+      </div>
     </Provider>,
     document.getElementById('root'),
   );

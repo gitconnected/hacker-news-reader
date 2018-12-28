@@ -1,7 +1,6 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-const setGlobalStyles = () =>
-  injectGlobal`
+const GlobalStyles = createGlobalStyle`
     * {
       box-sizing: border-box;
     }
@@ -28,4 +27,4 @@ const setGlobalStyles = () =>
     }
   `;
 
-export default setGlobalStyles;
+export default GlobalStyles;
