@@ -6,14 +6,14 @@
     "axios": "^0.18.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-infinite-scroll-component": "^4.2.0",
-    "react-redux": "^5.0.7",
-    "react-scripts": "1.1.5",
-    "react-test-renderer": "^16.5.2",
+    "react-redux": "^6.0.0",
+    "react-scripts": "2.1.2",
+    "react-test-renderer": "^16.7.0",
     "react-timeago": "^4.1.9",
-    "redux": "^4.0.0",
+    "redux":"4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
@@ -30,11 +30,11 @@
     "format": "./node_modules/.bin/prettier --write \"src/**/*.{js,jsx}\""
   },
   "devDependencies": {
-    "eslint": "^5.6.1",
+    "eslint": "^5.11.1 ",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.3"
-  }
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.0",
+    "prettier": "^1.15.3"
+  },
 }

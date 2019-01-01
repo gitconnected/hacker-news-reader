@@ -63,7 +63,7 @@ class App extends Component {
           <Wrapper>
             <TitleWrapper>
               <Title>
-                // Hacker News Reader{' '}
+                <div>{'// Hacker News Reader'}</div>
                 <GithubLink
                   href="https://github.com/gitconnected/hacker-news-reader"
                   target="_blank"
