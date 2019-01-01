@@ -16,7 +16,7 @@ const GridItem = ({ url, title, id }) => {
           <Image src="https://miro.medium.com/max/1176/1*F9RzuXseG1VrTjFJd403gw.png" />
           <Content>
             <Title>{title}</Title>
-            <Source>// {site}</Source>
+            <Source><div>{'// {site}'}</div></Source>
           </Content>
         </Card>
       </Item>
