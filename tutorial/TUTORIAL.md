@@ -132,7 +132,7 @@ For the brevity of this article, if you need a further understanding of the fund
 
 Return to the `src/index.js`, and now we can update it to connect our app to Redux. Add an import for `Provider` and update your render method to look like the following.
 
-![](https://cdn-images-1.medium.com/max/1600/1*0x17EAhOQPRPa9t2MmX7MQ.png)
+![](https://cdn-images-1.medium.com/max/1600/1*kf5b37s9H7_R--a_mSu2Hg.png)
 
 And that should be all you need to get Redux integrated with the app! Return to `http://localhost:3000`, and you should see the following when you open your Chrome console.
 
