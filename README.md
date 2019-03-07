@@ -6,6 +6,8 @@ A Hacker News clone (in night mode!) using all open source technology.
 
 Try it out: [Download the Chrome Extension](https://chrome.google.com/webstore/detail/hacker-news/hknoigmfpgfdkccnkbfbjfnocoegoefe?pli=1&authuser=1)
 
+Design inspired by [Daily Now](https://www.dailynow.co/) - Curated dev news for busy developers
+
 Use our solution or following along with our tutorial to build your own using React and Redux.
 
 ## What You'll Learn
