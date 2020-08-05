@@ -1,4 +1,4 @@
-### Created by [gitconnected - Developer News and Coding Tutorials](https://gitconnected.com)
+### Created by [Skilled.dev - Coding Interview Course](https://skilled.dev?ref=lightbox-react) and [gitconnected - Developer News and Coding Tutorials](https://gitconnected.com)
 
 ## Project Overview
 
